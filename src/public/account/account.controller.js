@@ -23,7 +23,7 @@
         SignupCtrl.SignUp = function() {
             //    console.log("inside side firstName: ", SignupCtrl.firstName);
             //  SignupCtrl.signupFlag = false;
-            AccountService.SignUp(SignupCtrl.firstName, SignupCtrl.lastName, SignupCtrl.emailAdd, SignupCtrl.phoneNo, SignupCtrl.fmenu);
+            AccountService.SignUp(SignupCtrl.firstName, SignupCtrl.lastName, SignupCtrl.emailAdd, SignupCtrl.phoneNo, SignupCtrl.fmenu.toUpperCase());
 
 
 
