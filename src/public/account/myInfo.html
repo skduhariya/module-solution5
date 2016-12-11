@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="col-sm-6 col-xs-offset-3" ng-if= "MyInfoCtrl.getInfo.length !==0">
+    <h1 class="text-center">My Info</h1>
+    <hr style="width:20%; border:2px solid #f6b319;"/>
+    <div class="row">
+
+        <div class="col-sm-4">
+            Name:
+        </div>
+        <div class="col-sm-8">
+            {{MyInfoCtrl.getInfo[0].fname}}
+            {{MyInfoCtrl.getInfo[0].lname}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Email:
+        </div>
+        <div class="col-sm-8">
+            {{MyInfoCtrl.getInfo[0].email}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Phone no:
+        </div>
+        <div class="col-sm-8">
+            {{MyInfoCtrl.getInfo[0].phone}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Favorite Menu:
+        </div>
+        <div class="col-sm-8">
+            <!-- {{MyInfoCtrl.getInfo[0].favorite}} -->
+
+            <div class="category-tile">
+              <img width="200" height="200" ng-src="images/menu/{{MyInfoCtrl.getInfo[0].favorite}}/{{MyInfoCtrl.getInfo[0].favorite}}.jpg" alt="{{$ctrl.category.name}}">
+              <span>  {{MyInfoCtrl.getInfo[0].favorite}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-6 col-xs-offset-3 text-center" ng-if="MyInfoCtrl.getInfo.length ===0" style="min-height:145px;">
+  <h1>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h1>
+</div>
+</div>
